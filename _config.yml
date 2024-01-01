@@ -108,7 +108,9 @@ theme: fluid
 #   # example, https://github.com/hexojs/hexojs.github.io
 #   branch: blog-pages
 deploy:
-  type: git
-  repo: git@github.com:njzhaowei/blog.git
-  # example, https://github.com/hexojs/hexojs.github.io
-  branch: gh-pages
+  - type: git
+    repo: git@github.com:njzhaowei/blog.git
+    branch: gh-pages
+  - type: git
+    repo: git@gitee.com:yewberry/blog.git
+    branch: blog-pages

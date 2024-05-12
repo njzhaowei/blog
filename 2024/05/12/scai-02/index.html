@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/myblog/img/fluid.jpg">
+  <link rel="icon" href="/myblog/img/fluid.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="写bug的补丁家">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="学习目标 自己动手，开发一个机器人，学会控制SCV。 学习Python中的while语句，代码块概念，print调用  一个机器人最少需要多少代码？{.line-numbers}1234567891011121314151617181920import cybwfrom time import sleepclient &#x3D; cybw.BWAPIClientBroodwar &#x3D; cybw.Broodw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="儿童编程02 Hello World">
+<meta property="og:url" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/index.html">
+<meta property="og:site_name" content="写bug的补丁家">
+<meta property="og:description" content="学习目标 自己动手，开发一个机器人，学会控制SCV。 学习Python中的while语句，代码块概念，print调用  一个机器人最少需要多少代码？{.line-numbers}1234567891011121314151617181920import cybwfrom time import sleepclient &#x3D; cybw.BWAPIClientBroodwar &#x3D; cybw.Broodw">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/1.png">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/2.png">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/3.jpg">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/4.jpg">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/5.jpg">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/6.jpg">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/7.jpg">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2753.png?v8">
+<meta property="og:image" content="https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/8.jpg">
+<meta property="og:image" content="https://github.githubassets.com/images/icons/emoji/unicode/2753.png?v8">
+<meta property="article:published_time" content="2024-05-12T07:53:55.000Z">
+<meta property="article:modified_time" content="2024-05-12T09:50:09.921Z">
+<meta property="article:author" content="写bug的补丁家">
+<meta property="article:tag" content="SCAI">
+<meta property="article:tag" content="StarCraft">
+<meta property="article:tag" content="星际争霸">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8">
+  
+  
+  
+  <title>儿童编程02 Hello World - 写bug的补丁家</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/myblog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/myblog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/myblog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"github.com","root":"/myblog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/myblog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/myblog/js/utils.js" ></script>
+  <script  src="/myblog/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/myblog/">
+      <strong>写bug的补丁家</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/myblog/img/default.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="儿童编程02 Hello World"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-12 15:53" pubdate>
+          2024年5月12日 15:53:55
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">儿童编程02 Hello World</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><ol>
+<li>自己动手，开发一个机器人，学会控制SCV。</li>
+<li>学习Python中的while语句，代码块概念，print调用</li>
+</ol>
+<h1 id="一个机器人最少需要多少代码？"><a href="#一个机器人最少需要多少代码？" class="headerlink" title="一个机器人最少需要多少代码？"></a>一个机器人最少需要多少代码？</h1><figure class="highlight python"><figcaption><span>{.line-numbers}</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> cybw<br><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep<br>client = cybw.BWAPIClient<br>Broodwar = cybw.Broodwar<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">reconnect</span>():<br>    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> client.connect():<br>        sleep(<span class="hljs-number">0.5</span>)<br>reconnect()<br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> Broodwar.isInGame():<br>        client.update()<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> client.isConnected():<br>            reconnect()<br><br>    <span class="hljs-keyword">while</span> Broodwar.isInGame():<br>        events = Broodwar.getEvents()<br>        <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> events:<br>            eventtype = e.getType()<br>        client.update()<br></code></pre></td></tr></tbody></table></figure>
+<p>上面就是一个用Python语言编写的，最简单的机器人代码，总共20行。后面我们解释每一行代码的含义并不断扩充我们的代码，完成更多不同的任务。但在此之前，先让我们把这个最简单的（也是最简陋的）机器人运行起来，看看他都能干些什么吧。</p>
+<h1 id="运行机器人代码"><a href="#运行机器人代码" class="headerlink" title="运行机器人代码"></a>运行机器人代码</h1><ol>
+<li>右键点击<font color="red">代码根文件夹</font>，选择“通过Code打开”。<blockquote>
+<p><span class="github-emoji"><span>👉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8" srcset="/myblog/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>还记得代码根文件夹在哪吗？<br>在<font color="red">游戏根文件夹</font>下找到mybot文件夹，我们所有的代码都在这个文件夹下，后面我们把这个<font color="red">mybot</font>文件夹简称为<font color="red">代码根文件夹</font></p>
+</blockquote>
+</li>
+<li>在左侧红圈处（我们称之为项目浏览器空白处）右键点击，选择“New File…”创建一个新的Python程序文件，并命名为“helloworld.py”</li>
+</ol>
+<p><img src="1.png" srcset="/myblog/img/loading.gif" lazyload></p>
+<p><img src="2.png" srcset="/myblog/img/loading.gif" lazyload></p>
+<blockquote>
+<p>helloworld，就是hello world，作为一个良好的习惯，我们不在程序文件的文件名里面加空格。至于为什么要取这个名字，大概是代表这我们的小机器人来到这个世界上之后最想说的一句话吧“你好，世界”</p>
+</blockquote>
+<blockquote>
+<p>.py叫文件后缀。电脑中每种文件基本都有各自的文件后缀，以便电脑能区分用什么软件打开这些文件。py是Python的缩写，代表这是一个python程序文件。</p>
+</blockquote>
+<ol start="3">
+<li>将上述代码拷贝到helloworld.py文件中并运行下，看看效果如何？</li>
+</ol>
+<p><img src="3.jpg" srcset="/myblog/img/loading.gif" lazyload></p>
+<blockquote>
+<p><span class="github-emoji"><span>👉</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png?v8" srcset="/myblog/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>还记得怎么运行我们的机器人吗？<br>提示一下<br>（a）按F5运行程序。<br>（b）运行Chaoslauncher.exe启动游戏</p>
+</blockquote>
+<p><img src="4.jpg" srcset="/myblog/img/loading.gif" lazyload></p>
+<h1 id="运行结果说明"><a href="#运行结果说明" class="headerlink" title="运行结果说明"></a>运行结果说明</h1><p>好像什么也没发生，游戏启动起来了，一个SCV傻傻的站在那，一动不动。为什么？为什么？为什么？<br>因为。。。。因为我们的机器人虽然启动了，但尚未被“注入灵魂”。对于程序而言，我们程序员就像上帝，而当前的程序代码并没让我们的SCV做什么事情，所以他当然只能傻傻的站着了。</p>
+<p>但没关系，我们先了解下运行结果，熟悉下各个常用“窗口”到底什么意思，很快的，我们就可以让SCV做些事情，让他别总是那么傻傻地站着（额，难道是从“傻傻站着”变成“傻傻跑着”？）</p>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>我们编写程序的软件叫编辑器，或者更专业的名字IDE。这个IDE是“集成开发环境”的英文缩写，听上去就很高深莫测的样子。</p>
+<h2 id="控制台"><a href="#控制台" class="headerlink" title="控制台"></a>控制台</h2><p>在编辑器编写代码的下方，有个小窗口，叫终端（Terminal）也叫控制台（Console）。怎么叫都可以，当然，如果称呼他的英文，感觉更加高深莫测。<br>他是干什么的呢？主要用来显示程序运行过程中信息，你可以看到，当我们程序运行起来时里面不断闪过各种英文。相当于程序运行过程中，通过这个窗口和你窃窃私语。<br>“老大，我一会要生产个机枪兵了，你等着看哦”<br>“老大，我忙死了”<br>“老大，你看我这样运行对不对啊？不对？不对我也要这么运行，就是任性。”</p>
+<p><img src="5.jpg" srcset="/myblog/img/loading.gif" lazyload></p>
+<p>当你看到如上图这样，程序在控制台打出“Connection successful”时，就是他在向你报告<br>“老大，我连上游戏了”</p>
+<h2 id="程序控制按钮"><a href="#程序控制按钮" class="headerlink" title="程序控制按钮"></a>程序控制按钮</h2><p><img src="6.jpg" srcset="/myblog/img/loading.gif" lazyload><br>当我们按F5启动程序之后，就可以在编辑器里面看到上图这个“控制按钮”，其中最右变两个分别是“重启程序”和“停止程序”，这是我们一会就要用到的按钮。其他按钮也很常用，等我们用到时再详细介绍。</p>
+<blockquote>
+<p>把鼠标悬停在按钮上，会出现按钮功能的说明文字哦。</p>
+</blockquote>
+<h1 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h1><p>下面，我们逐行讲解下代码，并在讲解的过程中做些小实验</p>
+<h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><p>我们从第10行开始讲起，我们首先遇到了while关键字，在编辑器中但凡遇到关键字都会给他特殊的颜色，python语言中有很多关键字，while是我们遇到的第一个，他的意思是“如果while后面的数值为True，则一直循环执行这个while管辖的所有代码”</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br></code></pre></td></tr></tbody></table></figure>
+<p>while关键字就向一个忠实的看门人，他每次先检查下自己身后的信号灯是不是True，如果是，他就跑到自己管理的代码块里，把他管理的代码块都执行一遍，然后再回头检查下身后的信号灯。如此往复，直到信号灯变成False。</p>
+<p>那这个while关键字到底管着多少代码呢？把鼠标移动到while关键字和“10”这个行号之间，会看到while前面出现了个小三角，点击这个三角，就会把while管理的代码块折叠起来，再点击一下，就会恢复展开。</p>
+<p>哟吼，他管理的还不少呢。</p>
+<p><img src="7.jpg" srcset="/myblog/img/loading.gif" lazyload></p>
+<blockquote>
+<p><span class="github-emoji"><span>❓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2753.png?v8" srcset="/myblog/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>告诉我，第10行的这个while关键字管理的代码块，最远管理到哪？（哪一行？）</p>
+</blockquote>
+<p>在第10行冒号之后，我们键入回车，然后输入<code>print('I see you, zmh')</code>，然后点击<font color="red">程序控制按钮中的“重启程序（Restart）”按钮</font>，并<font color="red">重新启动游戏</font>。你是否在控制台看到程序在和你窃窃私语了呢？</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">'I see you, zmh'</span>)<br>    <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> Broodwar.isInGame():<br>        client.update()<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> client.isConnected():<br>            reconnect()<br><br>    <span class="hljs-keyword">while</span> Broodwar.isInGame():<br>        events = Broodwar.getEvents()<br>        <span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> events:<br>            eventtype = e.getType()<br>        client.update()<br></code></pre></td></tr></tbody></table></figure>
+<p><img src="8.jpg" srcset="/myblog/img/loading.gif" lazyload></p>
+<blockquote>
+<p>Python语言通过缩进来确定关键字管理代码的范围，以第10行的while关键字为例，从while之后的冒号”:”开始，分别管理着我们输入的print语句以及另外两个内部的while语句。print和内部的两个while是不是都是齐头并进的？我们称齐头并进的语句处于相同层级的代码块，也就是说都听他们的上级：第10行的那个while管理</p>
+</blockquote>
+<h2 id="print函数调用"><a href="#print函数调用" class="headerlink" title="print函数调用"></a>print函数调用</h2><p>print后面有个括号，我们把一个英文单词后跟一个括号的情况叫<font color="red">函数调用</font>意思是“请调用这个叫print的函数，做他该做的事情”。<br>哎哟，函数？是不是在哪听过？没错，就是数学上。</p>
+<p>print后面跟括号，括号里的东东叫<font color="red">参数</font>。这里，print函数里面有一个参数，是一个用单引号括起来的东东<code>'I see you, zmh'</code>，我们管单引号<code>'</code>或双引号<code>"</code>括起来的一串东东叫<font color="red">字符串</font>也就是一串字符的意思。</p>
+<p>那么，<code>print('I see you, zmh')</code>这句的完整含义就是，我有个一个字符串，字符串的内容是“I see you, zmh”，我将这个字符串作为参数，传给print函数，让他做他应该做的事情。</p>
+<p>那print函数到底做什么事情的呢？他啊，就是把你传给他的参数显示到控制台的。我们常常通过print函数打印出一些文字，让我们的程序能在运行过程中与我们窃窃私语，从而让我们能了解程序干活干的怎么样，有没有遇到问题。</p>
+<blockquote>
+<p><span class="github-emoji"><span>❓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2753.png?v8" srcset="/myblog/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 除了<code>print('I see you, zmh')</code>，你还能打印什么内容到控制台？试试看，中英文都试试哦，然后截图会拍照让我检查。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/myblog/categories/%E5%84%BF%E7%AB%A5%E7%BC%96%E7%A8%8B/" class="category-chain-item">儿童编程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/myblog/tags/SCAI/" class="print-no-link">#SCAI</a>
+      
+        <a href="/myblog/tags/StarCraft/" class="print-no-link">#StarCraft</a>
+      
+        <a href="/myblog/tags/%E6%98%9F%E9%99%85%E4%BA%89%E9%9C%B8/" class="print-no-link">#星际争霸</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>儿童编程02 Hello World</div>
+      <div>https://github.com/njzhaowei/myblog.git/2024/05/12/scai-02/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>写bug的补丁家</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月12日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/myblog/2024/05/05/scai-01/" title="儿童编程01 准备开发环境">
+                        <span class="hidden-mobile">儿童编程01 准备开发环境</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/myblog/js/events.js" ></script>
+<script  src="/myblog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/myblog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/myblog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/myblog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

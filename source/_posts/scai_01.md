@@ -22,16 +22,16 @@ tags:
 > StarCraft是星际争霸游戏，至于安装的其他软件，我们以后会慢慢说明他们的用途
 
 ## 安装游戏
-1. 解压StarCraft.zip到桌面，最终游戏路径类似*C:\Users\【你的用户名】\Desktop\StarCraft*，我们将这个文件夹称为**游戏根文件夹**，这个名称我们后面会经常遇到。
+1. 解压StarCraft.zip到桌面，最终游戏路径类似*C:\Users\【你的用户名】\Desktop\StarCraft*，我们将这个文件夹称为<font color=red>**游戏根文件夹**</font>，这个名称我们后面会经常遇到。
    > 你可能看不见“.zip”字样，这没关系，只要文件名前面是StarCraft就可以
 
    > :point_right:还记得如何解压么？还记得如何查看文件夹路径么？
-   > ![](scai01.png)|![](scai02.png)
-   > --|--
+   > ![](scai01.png)
+   > ![](scai02.png)
 
 ## 安装Python
 你学习的编程语言叫“Python”，中文意思是“蟒蛇”，我们通过安装Python来使用这门电脑编程语言。
-1. 在**游戏根文件夹**下的software文件夹中找到*python-3.5.4.exe*并双击安装
+1. 在<font color=red>**游戏根文件夹**</font>下的software文件夹中找到*python-3.5.4.exe*并双击安装
 ![](scai03.png)
 ![](scai04.png)
 ![](scai05.png)
@@ -39,10 +39,10 @@ tags:
 
 ## 安装BWAPI
 我们的Python代码就是通过BWAPI这个软件来控制星际争霸游戏里面的各种元素（士兵、飞船、建筑等等）的。
-1. 在**游戏根文件夹**下找到BWAPI_412.bat这个文件，双击完成注册表导入。当显示“操作成功完成”表示导入完成，这时点击键盘上任意按钮即可。(你可能不明白什么是注册表，没关系，我们以后也不会遇到他)
+1. 在<font color=red>**游戏根文件夹**</font>下找到BWAPI_412.bat这个文件，双击完成注册表导入。当显示“操作成功完成”表示导入完成，这时点击键盘上任意按钮即可。(你可能不明白什么是注册表，没关系，我们以后也不会遇到他)
 ![](scai07.png)
 ![](scai08.png)
-2. 在**游戏根文件夹**下找到双击BWAPI_412_Setup.exe这个文件,双击安装BWAPI
+2. 在<font color=red>**游戏根文件夹**</font>下找到BWAPI_412_Setup.exe这个文件,双击安装BWAPI
 ![](scai11.png)
 ![](scai12.png)
 ![](scai13.png)
@@ -53,7 +53,7 @@ tags:
 ![](scai18.png)
 ![](scai19.png)
 ![](scai20.png)
-3. 安装完毕后**游戏根文件夹**会多出BWAPI和bwapi-data两个文件夹，其中BWAPI文件夹下的Chaoslauncher文件夹里面有个叫**Chaoslauncher.exe**的程序我们会经常用到。在桌面给他建个快捷方式吧。
+3. 安装完毕后<font color=red>**游戏根文件夹**</font>会多出**BWAPI**和**bwapi-data**两个文件夹，其中BWAPI文件夹下的Chaoslauncher文件夹里面有个叫**Chaoslauncher.exe**的程序我们会经常用到。在桌面给他建个快捷方式吧。
 > :point_right:还记得如何建快捷方式么？
 ![](scai21.png)
 4. 下面设置下，让每次运行**Chaoslauncher.exe**快捷方式时都以“管理员权限”运行。（也就是让这个程序能完全控制定能，这样它才能帮我们控制游戏里的各种元素）。右键点击快捷方式并选择“属性”。
@@ -62,7 +62,7 @@ tags:
 ![](scai21b.png)
 
 ## 安装VSCode
-1. 在**游戏根文件夹**下的software文件夹中找到VSCodeUserSetup-x64-1.87.2.exe，双击安装
+1. 在<font color=red>**游戏根文件夹**</font>下的software文件夹中找到VSCodeUserSetup-x64-1.87.2.exe，双击安装
 ![](scai22.png)
 ![](scai23.png)
 ![](scai24.png)
@@ -73,21 +73,21 @@ tags:
 
 # 准备编程
 作了这么多准备工作，终于到了我们的代码了。这里准备了一个例子代码，名字叫mybot，意思就是“我的机器人”。
-1. 在**游戏根文件夹**下找到mybot，我们所有的代码都在这个文件夹下，后面我们把**游戏根文件夹**下面的mybot文件夹简称为**代码根文件夹**。这个名称我们后面会经常遇到。
+1. 在<font color=red>**游戏根文件夹**</font>下找到mybot文件夹，我们所有的代码都在这个文件夹下，后面我们把**游戏根文件夹**下面的mybot文件夹简称为<font color=red>**代码根文件夹**</font>。这个名称我们后面会经常遇到。
 ![](scai29.png)
-2. 在**代码根文件夹**下的scripts文件夹里双击运行venv.bat文件，当看到类似下面的界面，表示运行成功。
+2. 在<font color=red>**代码根文件夹**</font>下的scripts文件夹里双击运行venv.bat文件，当看到类似下面的界面，表示运行成功。
 ![](scai30.png)
-3. 在**代码根文件夹**下的scripts文件夹里双击运行init.bat文件，当看到类似下面的界面，表示运行成功。
+3. 在<font color=red>**代码根文件夹**</font>下的scripts文件夹里双击运行init.bat文件，当看到类似下面的界面，表示运行成功。
 ![](scai31.png)
 
 # 开始编程
-1. 右键点击**代码根文件夹**，选择“通过Code打开”
+1. 右键点击<font color=red>**代码根文件夹**</font>，选择“通过Code打开”
 ![](scai32.png)
 2. 第一次这么操作时会出现下图界面，按截图勾选并点击按钮即可
 ![](scai33.png)
 3. 点击![](scai36.png)可以浏览代码，此时再点击mybot.py就可以看到机器人的代码了。
 ![](scai34.png)
-4. 点击![](scai37.png)可以安装插件，在**游戏根文件夹**下的software文件夹中找到ms-python-release-2020.8.6.vsix并点击“Install”
+4. 点击![](scai37.png)可以安装插件，在<font color=red>**游戏根文件夹**</font>下的software文件夹中找到ms-python-release-2020.8.6.vsix并点击“Install”
 ![](scai35.png)
 ![](scai38.png)
 5. 当看到下述界面，表示一切就绪

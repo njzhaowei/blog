@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://github.com/njzhaowei/blog.git
-root: /blog
+url: https://github.com/njzhaowei/myblog.git
+root: /myblog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -118,8 +118,8 @@ githubEmojis:
 #   branch: blog-pages
 deploy:
   - type: git
-    repo: git@github.com:njzhaowei/blog.git
+    repo: git@github.com:njzhaowei/myblog.git
     branch: gh-pages
-  - type: git
-    repo: git@gitee.com:yewberry/blog.git
-    branch: blog-pages
+  # - type: git
+  #   repo: git@gitee.com:yewberry/blog.git
+  #   branch: blog-pages
